@@ -10,3 +10,8 @@ resource "aws_route_table" "terraform-public" {
     Name = "${var.Main_Routing_Table}"
   }
 }
+
+resource "aws_route_table_association" "terraform-public-1" {
+  subnet_id      = aws_subnet.subnet1-public.id
+  route_table_id = aws_route_table.terraform-public.id
+}
