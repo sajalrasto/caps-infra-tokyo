@@ -9,7 +9,7 @@ sudo usermod -a -G docker ec2-user
 sudo chkconfig docker on
 
 # update and install docker
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+sudo yum install docker-ce docker-ce-cli containerd.io -y
 sudo chmod 666 /var/run/docker.sock
 
 #Because you always need it....
