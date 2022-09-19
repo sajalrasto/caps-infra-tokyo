@@ -15,7 +15,7 @@ variable "Main_Routing_Table" {}
 variable "azs" { default = "us-east-1a" }
 #"us-east-1b", "us-east-1c"]
 variable "environment" { default = "dev" }
-variable "instance_type" { default = "t2.xlarge" }
+variable "instance_type" { default = "t2.micro" }
 # test = "t2.micro"
 #prod = "t2.medium"
 
