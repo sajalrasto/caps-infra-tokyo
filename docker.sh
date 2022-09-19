@@ -36,3 +36,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 #Verify success:
 
 docker-compose version
+sudo amazon-linux-extras install java-openjdk11 -y
