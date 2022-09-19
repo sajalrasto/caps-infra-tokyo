@@ -13,7 +13,7 @@ resource "aws_instance" "instance_type" {
   }
 }
 
-resource "aws_instance" "instance_type" {
+resource "aws_instance" "instance_type1" {
   ami                         = "ami-05fa00d4c63e32376"
   instance_type               = "t2.xlarge"
   vpc_security_group_ids      = ["${aws_security_group.allow_all.id}"]
