@@ -13,6 +13,11 @@ resource "aws_instance" "instance_type" {
   }
 }
 
+resource "aws_eip" "lb" {
+  instance = aws_instance.instance_type.id
+  vpc      = true
+}
+
 resource "aws_instance" "instance_type1" {
   ami                         = "ami-05fa00d4c63e32376"
   instance_type               = "t2.xlarge"
