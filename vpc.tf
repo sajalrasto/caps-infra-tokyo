@@ -3,7 +3,7 @@ resource "aws_vpc" "default" {
   enable_dns_hostnames = true
   tags = {
     Name        = "${var.vpc_name}"
-    Owner       = "Manoj"
+    Owner       = "Sajal"
     environment = "${var.environment}"
   }
 }
