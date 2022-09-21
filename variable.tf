@@ -16,7 +16,7 @@ variable "azs" { default = "us-east-2b" }
 #"us-east-1b", "us-east-1c"]
 variable "environment" { default = "dev" }
 variable "instance_type" { default = "t2.medium" }
-variable "instance_type1" {}
+variable "instance_type1" { default = "t2.xlarge" }
 
 # test = "t2.micro"
 #prod = "t2.medium"
