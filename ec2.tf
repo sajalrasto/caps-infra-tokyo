@@ -8,6 +8,12 @@ resource "aws_instance" "instance_type" {
   #user_data                   = file("docker.sh")
   user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
+  root_block_device {
+      volume_size = "30"
+       volume_type = “gp2”
+        encrypted = true
+       delete_on_termination =true
+    }
   tags = {
     Name = "jenkins-master"
   }
@@ -28,6 +34,12 @@ resource "aws_instance" "instance_type1" {
   user_data                   = file("docker.sh")
   #user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
+  root_block_device {
+volume_size = "30"
+volume_type = “gp2”
+encrypted = true
+delete_on_termination =true
+}
   tags = {
     Name = "stagging"
   }
@@ -43,6 +55,12 @@ resource "aws_instance" "instance_type2" {
   #user_data                   = file("docker.sh")
   #user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
+  root_block_device {
+volume_size = "20"
+volume_type = “gp2”
+encrypted = true
+delete_on_termination =true
+}
   tags = {
     Name = "kubernetes-master"
   }
@@ -57,6 +75,12 @@ resource "aws_instance" "instance_type3" {
   #user_data                   = file("docker.sh")
   #user_data                   = "${file("jenkins.sh")}"
   key_name                    = var.key_name
+  root_block_device {
+volume_size = "30"
+volume_type = “gp2”
+encrypted = true
+delete_on_termination =true
+}
   tags = {
     Name = "k8s-worker-node"
   }
