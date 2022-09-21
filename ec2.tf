@@ -10,7 +10,7 @@ resource "aws_instance" "instance_type" {
   key_name                    = var.key_name
   root_block_device {
       volume_size = "30"
-       volume_type = “gp2”
+       volume_type = "gp2"
         encrypted = true
        delete_on_termination =true
     }
@@ -36,7 +36,7 @@ resource "aws_instance" "instance_type1" {
   key_name                    = var.key_name
   root_block_device {
 volume_size = "30"
-volume_type = “gp2”
+volume_type = "gp2"
 encrypted = true
 delete_on_termination =true
 }
@@ -57,7 +57,7 @@ resource "aws_instance" "instance_type2" {
   key_name                    = var.key_name
   root_block_device {
 volume_size = "20"
-volume_type = “gp2”
+volume_type = "gp2"
 encrypted = true
 delete_on_termination =true
 }
@@ -77,7 +77,7 @@ resource "aws_instance" "instance_type3" {
   key_name                    = var.key_name
   root_block_device {
 volume_size = "30"
-volume_type = “gp2”
+volume_type = "gp2"
 encrypted = true
 delete_on_termination =true
 }
