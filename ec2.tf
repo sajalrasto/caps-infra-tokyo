@@ -26,7 +26,7 @@ resource "aws_eip" "lb" {
 
 resource "aws_instance" "instance_type1" {
   ami                         = "ami-0568773882d492fc8"
-  instance_type               = "t2.xlarge"
+  instance_type               = var.instance_type1
   vpc_security_group_ids      = ["${aws_security_group.allow_all.id}"]
   subnet_id                   = aws_subnet.subnet1-public.id
   associate_public_ip_address = true
@@ -67,7 +67,7 @@ delete_on_termination =true
 }
 resource "aws_instance" "instance_type3" {
   ami                         = "ami-0568773882d492fc8"
-  instance_type               = "t2.xlarge"
+  instance_type               = var.instance_type1
   vpc_security_group_ids      = ["${aws_security_group.allow_all.id}"]
   subnet_id                   = aws_subnet.subnet1-public.id
   associate_public_ip_address = true
