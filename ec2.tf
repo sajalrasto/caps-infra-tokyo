@@ -15,7 +15,7 @@ resource "aws_instance" "instance_type" {
        delete_on_termination =true
     }
   tags = {
-    Name = "jenkins-master"
+    Name = "ansi-jenki-master"
   }
 }
 
@@ -62,7 +62,7 @@ encrypted = true
 delete_on_termination =true
 }
   tags = {
-    Name = "kubernetes-master"
+    Name = "kub-master"
   }
 }
 resource "aws_instance" "instance_type3" {
@@ -82,6 +82,6 @@ encrypted = true
 delete_on_termination =true
 }
   tags = {
-    Name = "k8s-worker-node"
+    Name = "kub-worker"
   }
 }
